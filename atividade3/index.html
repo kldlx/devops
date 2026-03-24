@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cachorro🐶</title>
+
+  <style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+      flex-direction: column;
+    }
+
+    img {
+      max-width: 400px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff9800;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #e68900;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🐶 Cachorro aleatório</h1>
+
+  <img id="dog" src="" alt="Imagem de cachorro">
+
+  <button onclick="carregarCachorro()">Novo cachorro</button>
+
+  <p id="erro" style="color: red;"></p>
+
+  <script>
+    function carregarCachorro() {
+      fetch('https://api.thedogapi.com/v1/images/search')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('dog').src = data[0].url;
+          document.getElementById('erro').textContent = '';
+        })
+        .catch(() => {
+          document.getElementById('erro').textContent =
+            'Erro ao carregar imagem 😢';
+        });
+    }
+
+    // Carrega um cachorro quando abre a página
+    carregarCachorro();
+  </script>
+
+</body>
+</html>

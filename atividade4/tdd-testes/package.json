@@ -1,0 +1,16 @@
+{
+  "name": "tdd-testes",
+  "version": "1.0.0",
+  "description": "Aula prática de testes unitários com Vitest e TDD",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "test:ui": "npx vitest --ui"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^4.1.1",
+    "vitest": "^4.1.1"
+  }
+}

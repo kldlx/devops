@@ -6,4 +6,5 @@ Projeto simples pra demonstrar o uso básico do git
 - index.html
 - script.js
 - style.css
-- notas.txt
+- notas.txt## Fluxo de trabalho
+Este projeto utiliza GitHub Flow.

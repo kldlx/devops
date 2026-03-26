@@ -1,5 +1,5 @@
 # Meu projeto 01
-Projeto simples pra demonstrar o uso básico do git
+Projeto introdutório para praticar versionamento com Git.
 
 ## Arquivos 
 - README.md
